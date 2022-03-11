@@ -1,0 +1,32 @@
+export interface IPessoaDetalhes {
+    idPessoa: number;
+    nomeMae?: number;
+    idEstadoCivil?: number;
+    idProfissao?: string;
+    idNaturezaOcupacao?: number;
+    idNacionalidade?: number;
+    numeroBanco?: number;
+    numeroAgencia?: number;
+    numeroContaCorrente?: string;
+    email?: string;
+    nomeEmpresa?: string;
+    nomeReferencia1?: string;
+    enderecoReferencia1?: string;
+    nomeReferencia2?: string;
+    enderecoReferencia2?: string;
+    salario?: number;
+    impedidoFinanciamento?: boolean;
+    naturalidadeCidade?: string;
+    naturalidadeEstado?: string;
+    grauInstrucao?: number;
+    numeroDependentes?: number;
+    nomePai?: string;
+    chequeEspecial?: number;
+    numeroCnh?: number;
+    pessoaPoliticamenteExposta?: boolean;
+    patrimonioTotal?: number;
+    nomeConjuge?: string;
+    flagNomePaiNaoInformado?: boolean;
+    flagSemEnderecoComercialFixo?: boolean;
+    dataEmissaoCnh?: string;
+}
