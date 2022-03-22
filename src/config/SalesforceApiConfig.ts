@@ -60,17 +60,17 @@ class RepositorioChaves {
         } else {
             [grant_type, client_id, client_secret, account_id, url_login] =
                 await Promise.all([
-                    azureKeyVaults.getSecret(process.env.SALESFORCE_GRANT_TYPE),
+                    azureKeyVaults.getSecret(process.env.xxx_GRANT_TYPE),
 
-                    azureKeyVaults.getSecret(process.env.SALESFORCE_CLIENT_ID),
+                    azureKeyVaults.getSecret(process.env.xxx_CLIENT_ID),
 
                     azureKeyVaults.getSecret(
-                        process.env.SALESFORCE_CLIENT_SECRET
+                        process.env.xxx_CLIENT_SECRET
                     ),
 
-                    azureKeyVaults.getSecret(process.env.SALESFORCE_ACCOUNT_ID),
+                    azureKeyVaults.getSecret(process.env.xxx_ACCOUNT_ID),
 
-                    azureKeyVaults.getSecret(process.env.SALESFORCE_URL_LOGIN),
+                    azureKeyVaults.getSecret(process.env.xxx_URL_LOGIN),
                 ]);
             // copia para fazer cache
             this.repositorio = {
@@ -119,20 +119,20 @@ class RepositorioChaves {
 
     private getEnvApiEventEnvByName(name: typeEvent) {
         const mapeamento: IKeysApiEvents = {
-            cartaoEntregue: process.env.CARTAO_ENTREGUE_API_EVENT,
-            clienteAusente: process.env.CLIENTE_AUSENTE_API_EVENT,
-            coletadoFabrica: process.env.COLETADO_FABRICA_API_EVENT,
+            cartaoEntregue: process.env.xxx_API_EVENT,
+            clienteAusente: process.env.xxx_API_EVENT,
+            coletadoFabrica: process.env.xxx_API_EVENT,
             emRota: process.env.EM_ROTA_API_EVENT,
-            preparandoCartao: process.env.PREPARANDO_CARTAO_API_EVENT,
-            saiuParaEntrega: process.env.SAIU_PARA_ENTREGA_API_EVENT,
-            cartaoDevolvido: process.env.CARTAO_DEVOLVIDO_API_EVENT,
-            retireCartaoCorreios: process.env.RETIRE_CARTAO_CORREIOS_API_EVENT,
+            preparandoCartao: process.env.xxx_API_EVENT,
+            saiuParaEntrega: process.env.xxx_API_EVENT,
+            cartaoDevolvido: process.env.xxx_API_EVENT,
+            retireCartaoCorreios: process.env.xxx_API_EVENT,
             tentativaEntregaCorreios:
-                process.env.TENTATIVA_DE_ENTREGA_CORREIOS_API_EVENT,
+                process.env.xxx_API_EVENT,
             tentativaEntregaFlash:
-                process.env.TENTATIVA_DE_ENTREGA_FLASH_API_EVENT,
+                process.env.xxxx_API_EVENT,
             tentativaEntregaTotal:
-                process.env.TENTATIVA_DE_ENTREGA_TOTALEXPRESS_API_EVENT,
+                process.env.xxx_API_EVENT,
         };
 
         return mapeamento[name];
