@@ -22,9 +22,9 @@ class PierRepositoryChaves {
             client_id = this.repository.client_id;
         } else {
             [url, access_token, client_id] = await Promise.all([
-                azureKeyVaults.getSecret(process.env.PIER_ULR),
-                azureKeyVaults.getSecret(process.env.PIER_TOKEN),
-                azureKeyVaults.getSecret(process.env.PIER_CLIENT_ID),
+                azureKeyVaults.getSecret(process.env.xxx_ULR),
+                azureKeyVaults.getSecret(process.env.xxx_TOKEN),
+                azureKeyVaults.getSecret(process.env.xxx_CLIENT_ID),
             ]);
 
             this.repository = {
