@@ -17,10 +17,10 @@ async function getDbRastreamentoConfig(): Promise<ConnectionOptions> {
         IdEnvioSalesforce,
     ];
     const [dbHost, dbUser, dbPassword, dbDatabase] = await Promise.all([
-        azureKeyVaults.getSecret(process.env.RASTREAMENTO_CARTOES_DB_HOST),
-        azureKeyVaults.getSecret(process.env.RASTREAMENTO_CARTOES_DB_USER),
-        azureKeyVaults.getSecret(process.env.RASTREAMENTO_CARTOES_DB_PASSWORD),
-        azureKeyVaults.getSecret(process.env.RASTREAMENTO_CARTOES_DB_DATABASE),
+        azureKeyVaults.getSecret(process.env.xxx_DB_HOST),
+        azureKeyVaults.getSecret(process.env.xxx_DB_USER),
+        azureKeyVaults.getSecret(process.env.xxx_DB_PASSWORD),
+        azureKeyVaults.getSecret(process.env.xxx_DB_DATABASE),
     ]);
 
     return {
@@ -44,10 +44,10 @@ async function getDbRastreamentoConfig(): Promise<ConnectionOptions> {
 async function getDbStageConfig(): Promise<ConnectionOptions> {
     const entities = [Produto];
     const [dbHost, dbUser, dbPassword, dbDatabase] = await Promise.all([
-        azureKeyVaults.getSecret(process.env.STAGE_DB_HOST),
-        azureKeyVaults.getSecret(process.env.STAGE_DB_USER),
-        azureKeyVaults.getSecret(process.env.STAGE_DB_PASSWORD),
-        azureKeyVaults.getSecret(process.env.STAGE_DB_DATABASE),
+        azureKeyVaults.getSecret(process.env.xxx_DB_HOST),
+        azureKeyVaults.getSecret(process.env.xxx_DB_USER),
+        azureKeyVaults.getSecret(process.env.xxx_DB_PASSWORD),
+        azureKeyVaults.getSecret(process.env.xxx_DB_DATABASE),
     ]);
 
     return {
